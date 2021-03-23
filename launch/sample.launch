@@ -1,0 +1,14 @@
+<!-- -->
+<launch>
+    <node name="$(arg node_name)" pkg="bagfile_player" type="bagfile_player_client" output="screen" required="true">
+        <param name="bag_file_path" value="$(arg bag_file_path)" />
+    </node>
+    <node pkg="bagfile_player" type="bagfile_player_server" name="$(arg node_name)_player_server" 
+          args="-r 4" output="screen"> <!-- add any options in the original rosbag play -->
+        <!-- <remap from="/task/cancel" to="~task/cancel" />
+        <remap from="/task/feedback" to="~task/feedback" />
+        <remap from="/task/goal" to="~task/goal" />
+        <remap from="/task/result" to="~task/result" />
+        <remap from="/task/status" to="~task/status" /> -->
+    </node>
+</launch>

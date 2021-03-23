@@ -1,0 +1,8 @@
+# Define the goal
+string bag_file_path
+---
+# Define the result
+bool done
+---
+#Define a feedback message
+float32 feedback
