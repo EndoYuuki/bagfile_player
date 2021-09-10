@@ -51,7 +51,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES bagfile_player
+  LIBRARIES
   CATKIN_DEPENDS roscpp std_msgs actionlib_msgs
 )
 
